@@ -1,0 +1,16 @@
+module allgatestest;
+reg a,b;
+wire c;
+and_gate dut(.a(a),.b(b),.c(c));
+Xnor_gate dut1(.a(a),.b(b),.c(c));
+or_gate dut2(.a(a),.b(b),.c(c));
+not_gate dut3(.a(a),.b(b),.c(c));
+nor_gate dut4(.a(a),.b(b),.c(c));
+nand_gate dut5(.a(a),.b(b),.c(c));
+initial begin
+a=0;b=0; #10;
+a=0;b=1; #10;
+a=1;b=0; #10;
+a=1;b=1; #10;
+end
+endmodule
